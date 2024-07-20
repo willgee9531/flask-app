@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi the user</title>
+</head>
+<body>
+    <h1>Hi {{ surname }} {{ name }}</h1>
+    <p>How are you today?</p>
+    <h4>These are the list of courses you offer: </h4>
+    <ul>
+        {% for course in courses %}
+            {% if course == "Coding" %}
+                <li>{{ course }} 😎</li>
+            {% else %}
+                <li>{{ course }} 📚</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <p>Each class takes up to 1hr per day making it: {{ 1 * 4 }}hrs per day</p>
+</body>
+</html>
